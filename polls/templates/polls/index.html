@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'polls/css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+{% for i in question %}
+    <a class="text" href="{% url 'QuestionDetailView' i.id %}">{{i.Question_text}}</a>
+    <p class="date">{{ i.pub_date}}</p>
+{% endfor %}
+
+</body>
+</html>

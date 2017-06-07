@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question</title>
+</head>
+<body>
+    <p>{{ question.Question_text }}</p>
+    <p>{{ question.pub_date }}</p>
+    <a href ="{% url 'view_result' question.id %}"><button>Result</button>
+    <a href ="{% url 'home' %}" ><button>HOME</button></a>
+
+
+</body>
+</html>
