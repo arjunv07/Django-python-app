@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>LOGOUT</title>
 </head>
-<body>
+<body style="background:url ({% static 'blog/img/headphones.jpg' %})">
         <a href="{% url 'login' %}">Click here to login</a><br>
         <a href="{% url 'Home' %}">Click here for home</a>
 

@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 
+import music
 from blog.views import signup
 from mysite import settings
 
@@ -25,6 +26,7 @@ urlpatterns = [
     url(r'^blog/', include("blog.urls")),
     url(r'accounts/', include('django.contrib.auth.urls')),
     url(r'^signup/$', signup, name='signup'),
+    url(r'^music/',include("music.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
